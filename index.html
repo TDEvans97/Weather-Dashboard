@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class="p-3 m-2">
+        <h1 class="text-white text-center">Weather Dashboard</h1>
+    </header>
+    <main class="container-fluid row" style="width: 100%;">
+        <div class="side col-md-4 col-lg-3 col-xl-3" style="width: 100%">
+
+            <form id="citySelector" class="card-body" style="border-bottom: solid 2px black; margin-bottom: 10px;">
+                <label style="font-size: 1.5rem; font-weight: 600" for="citySelector" class="form-label">
+                    Search for a city:
+                </label>
+                <input style="margin-bottom: 10px; width: 100%" type="text" class="form-input" id="city" name="city"
+                    placeholder="Select a city" />
+                <button type="submit" class="btn btn-primary mb-2" style="width: 100%">
+                    Search
+                </button>
+            </form>
+            <div class="list-group" id="past-searches"></div>
+        </div>
+        <div class="container col-md-8 col-lg-9 col-xl-9">
+            <div class="main border border-dark" style="
+            height: 150px;
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 10px 10px;
+          " id="currentWeather"></div>
+
+            <div id="card" class="row"></div>
+            <div class="dailyForecast container-fluid row" style="display: flex;
+            justify-content: space-between;
+          "></div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
